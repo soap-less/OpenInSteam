@@ -1,0 +1,34 @@
+{
+    "name": "OpenInSteam",
+    "version": "1.0",
+    "description": "Opens Steam webpages in the Steam app, like it should be.",
+    "manifest_version": 2,
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "js": [
+                "script.js"
+            ],
+            "matches": [
+                "https://*.steampowered.com/*",
+                "https://steamcommunity.com/",
+                "https://steamcommunity.com/*"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "browser_action": {
+        "default_icon": {
+            "16": "/icons/icon16.png",
+            "48": "/icons/icon48.png",
+            "128": "/icons/icon128.png"
+        }
+    },
+    "icons": { 
+        "16": "/icons/icon16.png",
+        "48": "/icons/icon48.png",
+       "128": "/icons/icon128.png"
+    }
+}
